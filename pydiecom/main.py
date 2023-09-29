@@ -34,13 +34,9 @@ def c_store_handle_gen(bucket_name: str):
             # Write the encoded dataset
             tf.write(event.request.DataSet.getvalue())
 
-            print("flush")
             tf.flush()
-            print(bucket_name)
-            print("upload")
 
             s3.upload_file(tf.name, bucket_name, f"{instance_uid}.dcm")
-            print("complete")
 
         # Return a 'Success' status
         return 0x0000
