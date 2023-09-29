@@ -1,23 +1,24 @@
 [tool.poetry]
-name = "pydiecom"
-version = "0.1.0"
-description = ""
 authors = ["Michael Clark <mclark@sironamedical.com>"]
+description = ""
+name = "pydiecom"
 readme = "README.md"
+version = "0.1.0"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+boto3 = "^1.28.57"
 pynetdicom = "^2.0.2"
+python = "^3.11"
 
 [tool.poetry.scripts]
 pydiecom = 'pydiecom.main:main'
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.9.1"
-ruff = "^0.0.291"
-pre-commit = "^3.4.0"
 isort = "^5.12.0"
+pre-commit = "^3.4.0"
+ruff = "^0.0.291"
 
 [build-system]
-requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
